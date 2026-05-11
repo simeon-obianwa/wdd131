@@ -1,0 +1,124 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    grid-area: header;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Navigation with Flexbox */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #000000;
+    padding: 1rem 0;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555555;
+    border-radius: 4px;
+}
+
+/* Main content area with Grid */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0;
+}
+
+section {
+    background-color: #cccccc;
+    padding: 2rem;
+    min-height: 400px;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #444444;
+}
+
+aside {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-left: 1px solid #dddddd;
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+aside p {
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* Footer styles */
+footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 1px solid #dddddd;
+    }
+}
