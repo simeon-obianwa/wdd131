@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1e5a8b;
+    color: white;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0.5rem 3rem;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.05rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+main {
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    width: 100%;
+}
+
+main h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 400;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.card {
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #1e5a8b;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.about-content {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 0.95rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.profile-image {
+    width: 160px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.location-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.location-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.location-info {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.flag-container {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.flag-container img {
+    width: 140px;
+    height: 85px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+}
+
+.flag-container p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.4rem;
+    line-height: 1.3;
+}
+
+.location-description {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.resource-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.resource-list li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+.resource-list a {
+    color: #0000ee;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.resource-list a:hover {
+    color: #7a00cc;
+}
+
+footer {
+    background-color: #1e5a8b;
+    color: white;
+    text-align: center;
+    padding: 1.25rem 0;
+    margin-top: 1.5rem;
+}
+
+footer p:first-child {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+#lastModified {
+    color: #f5e642;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 220px;
+    }
+
+    .location-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flag-container img {
+        margin: 0 auto;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    #course-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.5rem;
+    }
+}

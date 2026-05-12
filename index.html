@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals – Simeon Obianwa – Course landing page featuring web development resources, personal information, and learning materials">
+    <meta name="author" content="Simeon Obianwa">
+    <title>WDD 131 – Dynamic Web Fundamentals – Simeon Obianwa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 131 - Simeon Obianwa</h1> 
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    </header>
+
+    <nav>
+        <a href="https://www.linkedin.com/in/simeonobianwa/" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+        <a href="#">Final Project</a>
+    </nav>
+
+    <main>
+        <h1>Simeon Obianwa</h1>
+
+        <div class="cards-grid">
+            <section class="card">
+                <div class="card-header">About Me</div>
+                <div class="card-body">
+                    <div class="about-content">
+                        <p class="about-text">My name is Simeon Obianwa and I am a passionate web development student at
+                            BYU-Idaho. I was born and raised in Nigeria and currently reside in Lagos. I am
+                            excited to learn dynamic web development and look forward building interactive web
+                            applications that make a difference. My family are my world and I love spending time with
+                            them. I love to travel
+                            and learning new things every day.</p>
+                        <img src="images/profile-photo.jpg" alt="Simeon Obianwa - Profile Photo" class="profile-image">
+                    </div>
+                    <div class="location-section">
+                        <h3>Lagos, Nigeria</h3>
+                        <div class="location-info">
+                            <div class="flag-container">
+                                <img src="images/nigeria-flag.png" alt="Official Flag of Nigeria">
+                                <p>Official Flag of<br>Nigeria</p>
+                            </div>
+                            <p class="location-description">Nigeria is the most populous country in Africa and is
+                                located in West Africa. It is home to over 240 million people and more than 250 ethnic
+                                groups, making it one of the most culturally diverse nations in the world. The country
+                                is known for its vibrant economy, growing tech industry, and rich cultural heritage
+                                including Nollywood, Afrobeat music, and delicious foods and cuisine.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-body">
+                    <ul class="resource-list">
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span> 🌸 Simeon Obianwa 🌸 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
