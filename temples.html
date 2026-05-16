@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple Album - A collection of beautiful temples">
+    <title>Temple Album</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="temples.css">
+    <link rel="stylesheet" href="temples-large.css" media="(min-width: 768px)">
+
+    <script src="temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">Temple Album</h1>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#old">Old</a></li>
+                    <li><a href="#new">New</a></li>
+                    <li><a href="#large">Large</a></li>
+                    <li><a href="#small">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-heading">Home</h1>
+
+        <div class="temple-grid">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&h=400&fit=crop"
+                    alt="San Diego California Temple">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1548625361-188aa3f7fa29?w=600&h=400&fit=crop"
+                    alt="Salt Lake Temple">
+                <figcaption>Salt Lake Utah</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&h=400&fit=crop"
+                    alt="Los Angeles California Temple">
+                <figcaption>Los Angeles California</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&h=400&fit=crop"
+                    alt="San Diego California Temple">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1548625361-188aa3f7fa29?w=600&h=400&fit=crop"
+                    alt="Brigham City Temple">
+                <figcaption>Brigham City Utah</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&h=400&fit=crop"
+                    alt="Oakland California Temple">
+                <figcaption>Oakland California</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&h=400&fit=crop"
+                    alt="San Diego California Temple">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1548625361-188aa3f7fa29?w=600&h=400&fit=crop"
+                    alt="Reno Nevada Temple">
+                <figcaption>Reno Nevada</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&h=400&fit=crop"
+                    alt="Sacramento California Temple">
+                <figcaption>Sacramento California</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy;<span id="currentYear"></span> &#127780; Rubia Magdelena Francesco &#127780; Madagascar</p>
+            <p class="last-modified">Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
