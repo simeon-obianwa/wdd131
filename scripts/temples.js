@@ -1,186 +1,59 @@
-/**
- * Temple Album - JavaScript Functionality
- * Handles dynamic content and interactive features
- */
 
-document.addEventListener('DOMContentLoaded', function () {
-    updateFooterDates();
-    initializeHamburgerMenu();
-    initializeSmoothScroll();
+document.addEventListener('DOMContentLoaded', () => {
+    updateFooter();
+
+    setupHamburger();
 });
 
-/**
- * Update footer with current year and last modified date
- */
-function updateFooterDates() {
-    const currentYearElement = document.getElementById('currentYear');
-    if (currentYearElement) {
-        const currentYear = new Date().getFullYear();
-        currentYearElement.textContent = currentYear;
+function updateFooter() {
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
 
-    const lastModifiedElement = document.getElementById('lastModified');
-    if (lastModifiedElement) {
-        const lastModified = document.lastModified;
-        const formattedDate = formatDate(lastModified);
-        lastModifiedElement.textContent = formattedDate;
+    const modifiedSpan = document.getElementById('last-modified');
+    if (modifiedSpan) {
+        const lastModDate = new Date(document.lastModified);
+        const formattedDate = lastModDate.toLocaleDateString() + ' ' + lastModDate.toLocaleTimeString();
+        modifiedSpan.textContent = formattedDate;
     }
 }
 
-/**
- * Format date string to readable format
- * @param {string} dateString - The date string to format
- * @returns {string} Formatted date string
- */
-function formatDate(dateString) {
-    const date = new Date(dateString);
+function setupHamburger() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const iconSpan = hamburgerBtn?.querySelector('.icon');
 
-    const options = {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    };
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
 
-    return date.toLocaleString('en-US', options);
-}
-
-/**
- * Initialize hamburger menu functionality
- */
-function initializeHamburgerMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function () {
-            toggleHamburgerMenu(hamburger, navMenu, hamburgerIcon);
+            if (iconSpan) {
+                if (navMenu.classList.contains('open')) {
+                    iconSpan.innerHTML = '&times;';
+                } else {
+                    iconSpan.innerHTML = '&#9776;';
+                }
+            }
         });
 
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                closeHamburgerMenu(hamburger, navMenu, hamburgerIcon);
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                if (iconSpan) {
+                    iconSpan.innerHTML = '&#9776;';
+                }
             });
         });
 
-        document.addEventListener('click', function (event) {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                closeHamburgerMenu(hamburger, navMenu, hamburgerIcon);
-            }
-        });
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                closeHamburgerMenu(hamburger, navMenu, hamburgerIcon);
-            }
-        });
-    }
-}
-
-/**
- * Toggle hamburger menu open/closed
- * @param {HTMLElement} hamburger - The hamburger button element
- * @param {HTMLElement} navMenu - The navigation menu element
- * @param {HTMLElement} hamburgerIcon - The hamburger icon element
- */
-function toggleHamburgerMenu(hamburger, navMenu, hamburgerIcon) {
-    const isOpen = navMenu.classList.contains('active');
-
-    if (isOpen) {
-        closeHamburgerMenu(hamburger, navMenu, hamburgerIcon);
-    } else {
-        openHamburgerMenu(hamburger, navMenu, hamburgerIcon);
-    }
-}
-
-/**
- * Open hamburger menu
- * @param {HTMLElement} hamburger - The hamburger button element
- * @param {HTMLElement} navMenu - The navigation menu element
- * @param {HTMLElement} hamburgerIcon - The hamburger icon element
- */
-function openHamburgerMenu(hamburger, navMenu, hamburgerIcon) {
-    navMenu.classList.add('active');
-    hamburger.setAttribute('aria-expanded', 'true');
-    hamburgerIcon.innerHTML = '&times;'; // X symbol to close
-}
-
-/**
- * Close hamburger menu
- * @param {HTMLElement} hamburger - The hamburger button element
- * @param {HTMLElement} navMenu - The navigation menu element
- * @param {HTMLElement} hamburgerIcon - The hamburger icon element
- */
-function closeHamburgerMenu(hamburger, navMenu, hamburgerIcon) {
-    navMenu.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburgerIcon.innerHTML = '&#9776;'; // Hamburger symbol
-}
-
-/**
- * Initialize smooth scrolling for navigation links
- */
-function initializeSmoothScroll() {
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            const href = this.getAttribute('href');
-
-            if (href !== '#') {
-                event.preventDefault();
-                const target = document.querySelector(href);
-
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+        document.addEventListener('click', (event) => {
+            if (!hamburgerBtn.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('open');
+                if (iconSpan) {
+                    iconSpan.innerHTML = '&#9776;';
                 }
             }
         });
-    });
-}
-
-/**
- * Utility function to debounce resize events
- * @param {Function} func - Function to debounce
- * @param {number} wait - Wait time in milliseconds
- * @returns {Function} Debounced function
- */
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-function handleResize() {
-    if (window.innerWidth >= 768) {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        const hamburgerIcon = document.querySelector('.hamburger-icon');
-
-        if (hamburger && navMenu) {
-            closeHamburgerMenu(hamburger, navMenu, hamburgerIcon);
-        }
     }
 }
-
-window.addEventListener('resize', debounce(handleResize, 250));
-
-console.log('Temple Album initialized successfully!');
