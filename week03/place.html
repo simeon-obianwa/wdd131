@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Madagascar - Island of lemurs and unique biodiversity">
+    <title>Madagascar</title>
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+
+<body>
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 769px)" srcset="images/hero-desktop.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="images/hero-mobile.webp" type="image/webp">
+                <img src="images/hero-desktop.webp" alt="Ring-tailed lemurs of Madagascar" loading="lazy">
+            </picture>
+
+            <div class="data-section">
+                <h2>Data</h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>587,041 sq km</dd>
+
+                    <dt>Population:</dt>
+                    <dd>27,691,018</dd>
+
+                    <dt>Capital:</dt>
+                    <dd>Antananarivo</dd>
+
+                    <dt>Languages:</dt>
+                    <dd>Malagasy, French</dd>
+
+                    <dt>Currency:</dt>
+                    <dd>Malagasy Ariary</dd>
+
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+3</dd>
+
+                    <dt>Calling Code:</dt>
+                    <dd>+261</dd>
+
+                    <dt>Internet TLD:</dt>
+                    <dd>.mg</dd>
+                </dl>
+            </div>
+
+            <div class="weather-section">
+                <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd id="temperature">10 °C</dd>
+
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+
+                    <dt>Wind:</dt>
+                    <dd id="wind-speed">5 km/h</dd>
+
+                    <dt>Wind Chill:</dt>
+                    <dd id="wind-chill">Calculating...</dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> 🌺 Simeon Obianwa 🌺 Madagascar</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+
+</html>
