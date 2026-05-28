@@ -1,11 +1,18 @@
+/**
+ * Madagascar Place Page - JavaScript Module
+ * Handles wind chill calculation and dynamic footer updates
+ */
+
 (() => {
     'use strict';
 
+    // Static weather data for Madagascar (metric units)
     const WEATHER = Object.freeze({
         temperature: 10,    // °C
         windSpeed: 5        // km/h
     });
 
+    // DOM element cache
     const DOM = {
         windChill: null,
         currentYear: null,
@@ -30,6 +37,9 @@
      */
     const isWindChillViable = (temp, speed) => temp <= 10 && speed > 4.8;
 
+    /**
+     * Render wind chill value to the DOM
+     */
     const renderWindChill = () => {
         const { temperature, windSpeed } = WEATHER;
         const result = isWindChillViable(temperature, windSpeed)
@@ -39,9 +49,14 @@
         DOM.windChill.textContent = result;
     };
 
+    /**
+     * Update footer with dynamic date information
+     */
     const renderFooterDates = () => {
+        // Current year
         DOM.currentYear.textContent = new Date().getFullYear();
 
+        // Last modified timestamp
         const lastMod = new Date(document.lastModified);
         DOM.lastModified.textContent = lastMod.toLocaleDateString('en-US', {
             year: 'numeric',
@@ -54,16 +69,22 @@
         });
     };
 
-
+    /**
+     * Cache DOM elements for performance
+     */
     const cacheDOM = () => {
         DOM.windChill = document.getElementById('wind-chill');
         DOM.currentYear = document.getElementById('current-year');
         DOM.lastModified = document.getElementById('last-modified');
     };
 
+    /**
+     * Initialize application
+     */
     const init = () => {
         cacheDOM();
 
+        // Only proceed if required elements exist
         if (!DOM.windChill || !DOM.currentYear || !DOM.lastModified) {
             console.warn('Required DOM elements not found');
             return;
@@ -73,6 +94,7 @@
         renderWindChill();
     };
 
+    // Initialize when DOM is ready
     document.addEventListener('DOMContentLoaded', init);
 
 })();

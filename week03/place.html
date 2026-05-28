@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Madagascar - Island of lemurs and unique biodiversity">
-    <title>Madagascar</title>
+    <meta name="author" content="Simeon Obianwa">
+    <title>Madagascar - Discover the Island of Lemurs</title>
     <link rel="stylesheet" href="styles/place.css">
 </head>
 
@@ -17,11 +18,12 @@
     <main>
         <section class="hero">
             <picture>
-                <source media="(min-width: 768px)" srcset="images/hero-desktop.webp" type="image/webp">
+                <source media="(min-width: 769px)" srcset="images/hero-desktop.webp" type="image/webp">
                 <source media="(max-width: 768px)" srcset="images/hero-mobile.webp" type="image/webp">
                 <img src="images/hero-desktop.webp" alt="Ring-tailed lemurs of Madagascar" loading="lazy">
             </picture>
 
+            <!-- Data Section - Overlay on Hero -->
             <div class="data-section">
                 <h2>Data</h2>
                 <dl>
@@ -51,8 +53,9 @@
                 </dl>
             </div>
 
+            <!-- Weather Section - Overlay on Hero -->
             <div class="weather-section">
-                <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
+                <h2>Weather</h2>
                 <dl>
                     <dt>Temperature:</dt>
                     <dd id="temperature">10 °C</dd>
