@@ -1,217 +1,144 @@
-/* Global CSS Variables */
 :root {
     --color-red: #DC143C;
-    --color-green: #228B22;
+    --color-green: #009E60;
     --color-white: #FFFFFF;
-    --color-dark: #333333;
-    --color-light-gray: #f5f5f5;
-    --color-card-bg: rgba(255, 255, 255, 0.95);
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --border-radius: 4px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Reset and Base Styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-primary);
-    line-height: 1.6;
-    color: var(--color-dark);
-    background-color: var(--color-light-gray);
+    font-family: var(--font-main);
+    line-height: 1.5;
+    background-color: #f4f4f4;
 }
 
-/* Header Styles */
 header {
     background-color: var(--color-red);
     color: var(--color-white);
     text-align: center;
-    padding: var(--spacing-lg);
-    border-bottom: 8px solid var(--color-green);
+    padding: 1rem;
+    border-bottom: 5px solid var(--color-green);
 }
 
 header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 2.5rem;
 }
 
-/* Hero Section with Overlays */
 .hero {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
 }
 
-/* Data Section - Positioned as Overlay */
 .data-section {
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: var(--color-card-bg);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    min-width: 250px;
-    max-width: 300px;
+    top: 2rem;
+    left: 2rem;
+    width: 260px;
 }
 
 .data-section h2 {
     background-color: var(--color-green);
     color: var(--color-white);
-    padding: var(--spacing-sm) var(--spacing-md);
-    margin: calc(-1 * var(--spacing-md)) calc(-1 * var(--spacing-md)) var(--spacing-md) calc(-1 * var(--spacing-md));
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 5px 5px 0 0;
     font-size: 1.5rem;
 }
 
-/* Weather Section - Positioned as Overlay */
+.data-section dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-size: 0.9rem;
+    gap: 5px;
+}
+
+.data-section dt {
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
 .weather-section {
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--color-card-bg);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    min-width: 220px;
+    bottom: 2rem;
+    right: 2rem;
+    width: 260px;
 }
 
 .weather-section h2 {
     background-color: var(--color-green);
     color: var(--color-white);
-    padding: var(--spacing-sm) var(--spacing-md);
-    margin: calc(-1 * var(--spacing-md)) calc(-1 * var(--spacing-md)) var(--spacing-md) calc(-1 * var(--spacing-md));
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 5px 5px 0 0;
     font-size: 1.5rem;
-    position: relative;
-    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Weather icon using ::after pseudo-element for desktop view */
-.weather-section h2::after {
-    content: "⛅";
-    position: absolute;
-    right: var(--spacing-md);
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-}
-
-/* Mobile weather icon (SVG) */
-.weather-icon-mobile {
-    display: none;
-    width: 60px;
-    height: 60px;
-    margin: var(--spacing-sm) 0;
-}
-
-.weather-icon-mobile svg {
-    width: 100%;
-    height: 100%;
-}
-
-/* Definition Lists */
-dl {
+.weather-section dl {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+    gap: 5px;
 }
 
-dt {
-    font-weight: 600;
+.weather-section dt {
+    font-weight: bold;
     text-align: right;
-    color: var(--color-dark);
+    margin-right: 10px;
 }
 
-dd {
-    margin: 0;
-    color: #555;
+.weather-section h2::after {
+    content: "⛅";
+    font-size: 1.5rem;
 }
 
-/* Footer */
+.weather-icon-mobile {
+    display: none;
+}
+
 footer {
     background-color: var(--color-red);
     color: var(--color-white);
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: 1rem;
+    margin-top: auto;
 }
 
-footer p {
-    margin: var(--spacing-sm) 0;
-    font-size: 1rem;
-}
-
-/* Mobile View */
 @media screen and (max-width: 768px) {
-    :root {
-        --spacing-lg: 1.5rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    /* Hide desktop weather icon on mobile */
-    .weather-section h2::after {
-        display: none;
-    }
-
-    /* Show mobile SVG weather icon */
-    .weather-icon-mobile {
-        display: block;
-        text-align: center;
-    }
-
-    /* Stack overlays vertically on mobile */
-    .data-section {
-        position: relative;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        max-width: 100%;
-        margin: var(--spacing-md);
-        border-radius: var(--border-radius);
-    }
-
-    .weather-section {
-        position: relative;
-        bottom: 0;
-        right: 0;
-        min-width: 100%;
-        margin: var(--spacing-md);
-        border-radius: var(--border-radius);
-    }
-
     .hero {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
-    .hero img {
-        order: 1;
-    }
-
-    .data-section {
+    .data-section,
+    .weather-section {
+        position: static;
+        width: 90%;
+        margin: 1rem 0;
         order: 2;
     }
 
@@ -219,49 +146,13 @@ footer p {
         order: 3;
     }
 
-    dl {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
+    .weather-section h2::after {
+        content: "";
     }
 
-    dt {
-        text-align: left;
-        font-weight: 700;
-    }
-
-    dd {
-        margin-left: var(--spacing-md);
-        margin-bottom: var(--spacing-sm);
-    }
-
-    footer {
-        padding: var(--spacing-md);
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-/* Print Styles */
-@media print {
-
-    header,
-    footer {
-        background-color: var(--color-white);
-        color: var(--color-dark);
-    }
-
-    .data-section,
-    .weather-section {
-        box-shadow: none;
-        border: 1px solid #ccc;
+    .weather-icon-mobile {
+        display: block;
+        text-align: center;
+        margin: 0 auto 1rem auto;
     }
 }
