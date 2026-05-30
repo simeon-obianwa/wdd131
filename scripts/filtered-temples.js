@@ -67,14 +67,14 @@ const temples = [
         location: "Pocatello, Idaho, United States",
         dedicated: "2021, November, 7",
         area: 71125,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/pocatello-idaho/400x250/pocatello-idaho-temple-exterior.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/pocatello-idaho/400x250/pocatello-idaho-temple.jpg"
     },
     {
         templeName: "Denver Colorado",
         location: "Centennial, Colorado, United States",
         dedicated: "1986, October, 24",
         area: 29117,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/denver-colorado/400x250/denver-colorado-temple-lds-809939-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/denver-colorado/400x250/denver-colorado-temple-lds.jpg"
     },
     {
         templeName: "Rome Italy",
