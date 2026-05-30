@@ -1,0 +1,67 @@
+@media (min-width: 768px) {
+
+    #hamburger-btn {
+        display: none;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    nav a:hover {
+        padding-left: 1rem;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .temple-card img {
+        height: 300px;
+    }
+
+    .temple-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+}
