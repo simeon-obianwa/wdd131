@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan: Auditassured International</title>
+    <style>
+        :root {
+            --primary-color: #0B2545;
+            /* Deep Navy Blue */
+            --secondary-color: #134074;
+            /* Steel Blue */
+            --accent-color: #EEB902;
+            /* Gold/Amber */
+            --bg-color: #F4F5F7;
+            /* Light Grey/Off-White */
+            --text-color: #1D2A44;
+            /* Charcoal */
+            --white: #FFFFFF;
+            --wireframe-bg: #E2E8F0;
+            --wireframe-border: #94A3B8;
+        }
+
+        /* Typography Selection */
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            /* Body Font */
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            /* Heading Font */
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* Layout Structure */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-style: italic;
+            margin: 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        section h2 {
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Specific Content Styling */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .services-list li {
+            background-color: var(--bg-color);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
+            font-weight: bold;
+        }
+
+        .scenarios-list ol {
+            padding-left: 1.2rem;
+        }
+
+        .scenarios-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+
+        /* Color Palette Display */
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .color-swatch {
+            flex: 1;
+            min-width: 150px;
+            border: 1px solid #DDD;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .swatch-color {
+            height: 60px;
+        }
+
+        .swatch-info {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* Wireframe CSS Representations */
+        .wireframe-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .wireframe-box {
+            background: #FFF;
+            border: 2px dashed var(--wireframe-border);
+            padding: 1rem;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .wf-element {
+            background-color: var(--wireframe-bg);
+            border: 1px solid var(--wireframe-border);
+            text-align: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            font-family: Arial, sans-serif;
+            color: #475569;
+        }
+
+        .wf-flex {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .wf-flex .wf-element {
+            flex: 1;
+        }
+
+        .wf-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Website Planning Document</h1>
+        <p>Auditassured International &bull; theauditassured.com</p>
+    </header>
+
+    <main>
+
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>Company Name:</strong> Auditassured International</p>
+            <p><strong>Domain Name:</strong> <a href="https://theauditassured.com"
+                    target="_blank">theauditassured.com</a></p>
+            <p><strong>Description:</strong> Auditassured International is a professional management system consulting
+                company. The website serves as the primary digital identifier critical for branding, global visibility,
+                and corporate recognition. The company provides high-end management system auditing and consulting
+                services to both private corporations and government organizations within Nigeria and across
+                international markets.</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The primary purpose of the website is to provide a robust digital platform to showcase Auditassured
+                International’s services to local and global clients. It is designed to create an exceptional digital
+                first impression, establishing trust, authority, and credibility within the strict corporate auditing
+                landscape. By maintaining an online presence, the firm enhances its overall global market reach.</p>
+
+            <h3>Our Services:</h3>
+            <ul class="services-list">
+                <li>ISO Certification Support</li>
+                <li>Quality Management Systems</li>
+                <li>Compliance & Auditing Services</li>
+                <li>Information Security Management</li>
+                <li>Environmental & Sustainability Management</li>
+                <li>Food Safety Management System</li>
+                <li>Occupational Health and Safety</li>
+                <li>Environmental, Social & Governance (ESG)</li>
+                <li>Training & Development</li>
+            </ul>
+        </section>
+
+        <section id="scenarios" class="scenarios-list">
+            <h2>Scenarios</h2>
+            <p>The following are 8 critical questions likely to be asked by site visitors (representing government
+                stakeholders, private executives, and compliance officers) searching for verification and support:</p>
+            <ol>
+                <li>What specific ISO certification standards (e.g., ISO 9001, 14001, 45001) does your company provide
+                    support for?</li>
+                <li>Can you assist a Nigerian government agency in aligning with federal regulatory compliance
+                    frameworks?</li>
+                <li>What is the typical timeline and roadmap for establishing a Food Safety Management System from
+                    scratch?</li>
+                <li>Do you offer custom training and capacity-building programs for our internal corporate auditing
+                    teams?</li>
+                <li>Are your consulting and pre-audit services available remotely for international clients outside of
+                    West Africa?</li>
+                <li>How does Auditassured International ensure data privacy and security during a comprehensive
+                    corporate compliance audit?</li>
+                <li>Can you provide case studies or proof of successful certification support for businesses operating
+                    in highly regulated fields?</li>
+                <li>How do your Environmental, Social, and Governance (ESG) advisory services help local African
+                    enterprises satisfy international investor due diligence?</li>
+            </ol>
+        </section>
+
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>The colors chosen for this project emphasize corporate professionalism, stability, authority, and
+                reliability.</p>
+
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: #0B2545;"></div>
+                    <div class="swatch-info">
+                        <strong>Primary Blue (#0B2545)</strong><br>
+                        Headers, primary navigation background, and main structural accents.
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: #134074;"></div>
+                    <div class="swatch-info">
+                        <strong>Secondary Blue (#134074)</strong><br>
+                        Subheadings, borders, list accents, and footer backgrounds.
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: #EEB902;"></div>
+                    <div class="swatch-info">
+                        <strong>Accent Gold (#EEB902)</strong><br>
+                        Call-to-actions, hover states, important highlights, and thin header line.
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch-color" style="background-color: #F4F5F7;"></div>
+                    <div class="swatch-info">
+                        <strong>Background Grey (#F4F5F7)</strong><br>
+                        Overall site canvas backdrop to ensure clean content separation.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>To strike a balance between modern business sharpness and institutional prestige, a clear two-font system
+                will be utilized:</p>
+            <ul>
+                <li>
+                    <strong>Heading Font:</strong> <code>'Arial', 'Helvetica Neue', sans-serif</code>
+                    <br><small>Applied to all main titles, section headers (H1, H2, H3). This clean, sans-serif
+                        typography ensures rapid scanning and modern authority.</small>
+                </li>
+                <li>
+                    <strong>Body Text Font:</strong> <code>Georgia, 'Times New Roman', serif</code>
+                    <br><small>Applied to paragraphs, lists, descriptions, and long-form case studies. The structured
+                        serif typeface evokes traditional trust, compliance, and academic rigor.</small>
+                </li>
+            </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>Layout Wireframes</h2>
+            <p>Below are conceptual structural wireframes indicating the responsive layout design across both screen
+                variations.</p>
+
+            <div class="wireframe-container">
+
+                <div class="wireframe-box">
+                    <h3>Mobile View Layout</h3>
+                    <div class="wf-element">Header / Logo (Centered)</div>
+                    <div class="wf-element">&#9776; Mobile Menu Button</div>
+                    <div class="wf-element" style="height: 60px;">Hero Banner / Value Prop Stacked</div>
+                    <div class="wf-element">Primary Call to Action</div>
+                    <div class="wf-element">Service Item 1 - ISO & Quality</div>
+                    <div class="wf-element">Service Item 2 - Compliance & InfoSec</div>
+                    <div class="wf-element">Service Item 3 - HSE & Food Safety</div>
+                    <div class="wf-element">Service Item 4 - ESG & Training</div>
+                    <div class="wf-element">Footer Links & Info (Stacked)</div>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Desktop View Layout</h3>
+                    <div class="wf-flex">
+                        <div class="wf-element" style="flex: 2;">Logo / Auditassured</div>
+                        <div class="wf-element" style="flex: 3;">Navigation Links (Home, Services, About, Contact)</div>
+                    </div>
+                    <div class="wf-element" style="height: 80px;">Hero Background Image + Central Overlay Value
+                        Proposition Headline + CTA Button</div>
+                    <div class="wf-element">Introductory Statement Segment</div>
+                    <div class="wf-grid">
+                        <div class="wf-element">ISO Support</div>
+                        <div class="wf-element">Quality Systems</div>
+                        <div class="wf-element">Compliance & Audit</div>
+                        <div class="wf-element">Info Security</div>
+                        <div class="wf-element">Env & Sustainability</div>
+                        <div class="wf-element">Food Safety</div>
+                        <div class="wf-element">Occupational Health</div>
+                        <div class="wf-element">ESG Frameworks</div>
+                        <div class="wf-element">Training & Dev</div>
+                    </div>
+                    <div class="wf-flex">
+                        <div class="wf-element">Footer Legal</div>
+                        <div class="wf-element">Footer Nav</div>
+                        <div class="wf-element">Social Links</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Auditassured International Planning Document. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
