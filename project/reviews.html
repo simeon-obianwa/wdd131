@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Submit enterprise performance reports and review operational system installations orchestrated by IMS Consultants.">
+    <meta name="author" content="IMS Consultants Corporate Web Development Division">
+    <title>IMS Consultants | Operational Review Interface</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo-text">IMS Consultants</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-box">
+            <h2>Services Review Rating</h2>
+            <p class="subheading-context">Your review and rating will help us better understand how to improve our
+                services.</p>
+
+            <form id="clientReviewForm">
+                <div class="form-group">
+                    <label for="clientIdentity">Enterprise Legal Name / Representative</label>
+                    <input type="text" id="clientIdentity" class="input-field" placeholder="e.g., Lead Quality Director"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientSecureEmail">Official Corporate Email</label>
+                    <input type="email" id="clientSecureEmail" class="input-field" placeholder="sales@enterprise.org"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="satisfactionLevel">Select Evaluation Score</label>
+                    <select id="satisfactionLevel" class="input-field" required>
+                        <option value="" disabled selected>Select service performance rating...</option>
+                        <option value="5">Excellent Service Delivery (5 Star Rating)</option>
+                        <option value="4">Good Service Delivery (4 Star Rating)</option>
+                        <option value="3">Acceptable Service Delivery (3 Star Rating)</option>
+                        <option value="2">Below Expectation Service Delivery (2 Star Rating)</option>
+                        <option value="1">Unsatisfactory Service Delivery (1 Star Rating)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="narrativeText">Describe Service Experience</label>
+                    <textarea id="narrativeText" class="input-field" rows="5"
+                        placeholder="Elaborate service experience in details..." required></textarea>
+                </div>
+
+                <button type="submit" class="action-button">Submit Review Rating</button>
+            </form>
+
+            <div id="analyticsPanel" class="analytics-badge">
+                <p><strong>Local Caching Status:</strong> Your terminal profile has committed <span
+                        id="metricCounter">0</span> system assessments to this regional browser sandbox.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IMS Consultants | Lagos, Nigeria.</p>
+        <p id="footer-time-display">Initializing runtime parameter tracks...</p>
+        <div class="footer-nav">
+            <a href="references.html" class="footer-link">Asset and Image References</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
