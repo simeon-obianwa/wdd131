@@ -1,4 +1,3 @@
-// Product array data
 const products = [
     {
         id: "fc-1888",
@@ -26,6 +25,7 @@ const products = [
         averagerating: 5.0
     }
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product-name");
 
